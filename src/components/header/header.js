@@ -4,7 +4,7 @@ import { auth } from "../firebase/firebase";
 import { AiFillHome } from "react-icons/ai";
 import "./header.css";
 
-function header({ currentUser }) {
+function Header({ currentUser }) {
   return (
     <nav className="topMenu">
       <ul className="list-left">
@@ -44,4 +44,4 @@ function header({ currentUser }) {
   );
 }
 
-export default header;
+export default Header;
