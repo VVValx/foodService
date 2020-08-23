@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
+import { auth } from "./components/firebase/firebase";
+import Home from "./components/pages/home/home";
+import Login from "./components/pages/auth/login";
+import NotFound from "./components/404/notFound";
+import Header from "./components/header/header";
+import "./App.css";
 
 function App() {
+  const [currentUser, setCurrentuser] = useState(null);
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      setCurrentuser(user);
+    });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header currentUser={currentUser} />
+      <Switch>
+        <Route path="/login" exact component={Login} />
+        <Route path="/" exact component={Home} />
+        <Route path="/notFound" component={NotFound} />
+        <Redirect to="/notFound" />
+      </Switch>
     </div>
   );
 }
