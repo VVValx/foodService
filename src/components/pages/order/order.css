@@ -1,0 +1,57 @@
+.builder-container {
+  width: 40%;
+  max-width: 600px;
+  min-width: 500px;
+  text-align: center;
+  margin: 10px auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+.builder {
+  margin: 10px 0;
+}
+
+.table {
+  width: 95%;
+  margin: 0 auto;
+  border: 2px solid #eaecee;
+  border-radius: 5px;
+}
+
+.table td {
+  padding: 2px 0;
+}
+
+.recipe-items {
+  width: 95%;
+  margin: 5px auto;
+}
+
+.checkout {
+  width: 95%;
+  margin: 5px auto;
+}
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  color: #ecf0f1;
+  cursor: pointer;
+}
+
+.add {
+  background: rgb(40, 180, 131);
+}
+.delete {
+  background: #e74c3c;
+}
+.block {
+  width: 100%;
+}

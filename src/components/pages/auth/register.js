@@ -92,7 +92,7 @@ function Register({ history }) {
     <div className="login-wrapper">
       <div className="login-left">
         <div className="left-center">
-          <button>Signin</button>
+          <button>Sign in</button>
         </div>
       </div>
 
@@ -132,9 +132,7 @@ function Register({ history }) {
           </div>
 
           <div className="form-input">
-            <button className="primary-green" onClick={handleSubmit}>
-              Create Account
-            </button>
+            <button onClick={handleSubmit}>Create Account</button>
           </div>
         </div>
       </div>

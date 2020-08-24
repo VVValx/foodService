@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase/firebase";
-import { AiFillHome } from "react-icons/ai";
 import "./header.css";
 
 function Header({ currentUser }) {
@@ -9,9 +8,7 @@ function Header({ currentUser }) {
     <nav className="topMenu">
       <ul className="list-left">
         <Link to="/" className="link">
-          <li>
-            <AiFillHome />
-          </li>
+          <li className="home">fs</li>
         </Link>
       </ul>
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { googleAuth, auth } from "../../firebase/firebase";
-import "./login.css";
+import "./auth.css";
 
 function Login({ history }) {
   const [data, setData] = useState({ email: "", password: "" });
@@ -14,6 +14,9 @@ function Login({ history }) {
   };
 
   const handleSubmit = async () => {
+    if (data.email === "" || data.password === "")
+      return setError("incorrect password or email");
+
     const { email, password } = data;
 
     try {
@@ -65,9 +68,7 @@ function Login({ history }) {
           <div className="form-input">{error && <p>{error}</p>}</div>
 
           <div className="form-input">
-            <button className="primary-green" onClick={handleSubmit}>
-              Sign in
-            </button>
+            <button onClick={handleSubmit}>Sign in</button>
           </div>
         </div>
       </div>

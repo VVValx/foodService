@@ -7,19 +7,20 @@
 
 .link {
   text-decoration: none;
+  background: #17a589;
 }
 
-ul {
+.topMenu ul {
   list-style-type: none;
 }
 
 .list-right {
   display: flex;
   justify-content: space-between;
+  margin-right: 5px;
 }
 
-li {
-  padding: 15px 0;
+.topMenu li {
   margin-left: 5px;
   cursor: pointer;
 }
@@ -36,6 +37,8 @@ li {
   color: #ecf0f1;
 }
 
-.primary-green {
+.home {
+  font-size: 35px;
+  font-weight: bold;
   color: #17a589;
 }
